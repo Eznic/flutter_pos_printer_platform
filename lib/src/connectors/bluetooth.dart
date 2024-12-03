@@ -166,7 +166,7 @@ class BluetoothPrinterConnector implements PrinterConnector<BluetoothPrinterInpu
   bool _addDevice(PrinterDevice device) {
     bool isDeviceAdded = true;
     final list = _scanResults.value;
-    if (!list.any((e) => e.address == device.address))
+    if (!list!.any((e) => e.address == device.address))
       list.add(device);
     else
       isDeviceAdded = false;
